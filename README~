@@ -1,0 +1,27 @@
+########################
+# Homework 2 - Math 442
+# (Image processing)
+# Brett Beutell
+# Fall, 2013
+########################
+
+
+All of the functionality of pgmdo.c is wrapped into the readImage function.
+readImage takes an input file, option, and output file.
+
+The option arg determines whether to perform ASCII, inversion, or blurring.
+It is of type integer, but often the macros ASCII, INV, or BLUR will be
+used in lieu of the integer that corresponds to their function call.
+
+All three functions take a 1-dimensional array of floats. 
+Inversion and blurring both output to a .pgm file 
+with the proper format (i.e., header, specs, ints).
+
+Everything is a.o.k from the tests, however...
+
+-- I get a warning on compilation, but it's really nonfatal.
+   The compiler doesn't seem to like my switch statement in the readImage func.
+-- Leaving an exit(-1) below the switch statement caused major errors but
+   resolved the warning.
+-- I suppose I could put some sort of error handling, but for now it didn't
+   seem wholly necessary.
